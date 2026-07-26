@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://user-99816.github.io/white-rhino-hotel-chatbot/sitemap.xml
