@@ -6,6 +6,10 @@
 
 import StorageService from "./StorageService";
 
+import sedan from "../assets/airport/sedan.jpg";
+import suv from "../assets/airport/suv.jpg";
+import shuttle from "../assets/airport/shuttle.jpg";
+
 class AirportService {
 
     constructor() {
@@ -20,7 +24,7 @@ class AirportService {
                 capacity: 3,
                 luggage: 2,
                 price: 2500,
-                image: "/images/airport/sedan.jpg",
+                image: sedan,
                 available: true
             },
 
@@ -30,7 +34,7 @@ class AirportService {
                 capacity: 6,
                 luggage: 5,
                 price: 4500,
-                image: "/images/airport/suv.jpg",
+                image: suv,
                 available: true
             },
 
@@ -40,7 +44,7 @@ class AirportService {
                 capacity: 12,
                 luggage: 12,
                 price: 7000,
-                image: "/images/airport/shuttle.jpg",
+                image: shuttle,
                 available: true
             }
 
