@@ -1,0 +1,281 @@
+{
+  "MAIN": {
+    "title": "🏨 White Rhino Hotel",
+    "subtitle": "Virtual Receptionist",
+    "message": "Welcome to White Rhino Hotel.\nPlease choose one of the following services.",
+    "options": [
+      {
+        "id": "1",
+        "icon": "🛏️",
+        "text": "Book a Room",
+        "next": "BOOK_ROOM"
+      },
+      {
+        "id": "2",
+        "icon": "💰",
+        "text": "Room Prices",
+        "next": "ROOM_PRICES"
+      },
+      {
+        "id": "3",
+        "icon": "🍽️",
+        "text": "Restaurant",
+        "next": "RESTAURANT"
+      },
+      {
+        "id": "4",
+        "icon": "🏢",
+        "text": "Conference Hall",
+        "next": "CONFERENCE"
+      },
+      {
+        "id": "5",
+        "icon": "🚖",
+        "text": "Airport Pickup",
+        "next": "AIRPORT"
+      },
+      {
+        "id": "6",
+        "icon": "🏊",
+        "text": "Facilities",
+        "next": "FACILITIES"
+      },
+      {
+        "id": "7",
+        "icon": "📋",
+        "text": "Existing Reservation",
+        "next": "RESERVATION"
+      },
+      {
+        "id": "8",
+        "icon": "☎️",
+        "text": "Contact Reception",
+        "next": "CONTACT"
+      },
+      {
+        "id": "9",
+        "icon": "❓",
+        "text": "Help",
+        "next": "HELP"
+      }
+    ]
+  },
+
+  "BOOK_ROOM": {
+    "title": "🛏️ Room Booking",
+    "message": "Select your preferred room type.",
+    "options": [
+      {
+        "id": "1",
+        "icon": "🛌",
+        "text": "Standard Room"
+      },
+      {
+        "id": "2",
+        "icon": "⭐",
+        "text": "Deluxe Room"
+      },
+      {
+        "id": "3",
+        "icon": "👑",
+        "text": "Executive Room"
+      },
+      {
+        "id": "4",
+        "icon": "💎",
+        "text": "Suite"
+      }
+    ]
+  },
+
+  "ROOM_PRICES": {
+    "title": "💰 Room Prices",
+    "message": "Current room rates per night.",
+    "options": [
+      {
+        "id": "1",
+        "icon": "🛌",
+        "text": "Standard - KSh 6,000"
+      },
+      {
+        "id": "2",
+        "icon": "⭐",
+        "text": "Deluxe - KSh 8,500"
+      },
+      {
+        "id": "3",
+        "icon": "👑",
+        "text": "Executive - KSh 11,000"
+      },
+      {
+        "id": "4",
+        "icon": "💎",
+        "text": "Suite - KSh 18,000"
+      }
+    ]
+  },
+
+  "RESTAURANT": {
+    "title": "🍽️ Restaurant",
+    "message": "Choose a restaurant service.",
+    "options": [
+      {
+        "id": "1",
+        "icon": "☀️",
+        "text": "Breakfast"
+      },
+      {
+        "id": "2",
+        "icon": "🍛",
+        "text": "Lunch"
+      },
+      {
+        "id": "3",
+        "icon": "🥩",
+        "text": "Dinner"
+      },
+      {
+        "id": "4",
+        "icon": "🍷",
+        "text": "Bar & Drinks"
+      }
+    ]
+  },
+
+  "CONFERENCE": {
+    "title": "🏢 Conference Hall",
+    "message": "Conference services available.",
+    "options": [
+      {
+        "id": "1",
+        "icon": "👥",
+        "text": "Small Meeting Room"
+      },
+      {
+        "id": "2",
+        "icon": "🎤",
+        "text": "Medium Conference Hall"
+      },
+      {
+        "id": "3",
+        "icon": "🏛️",
+        "text": "Grand Ballroom"
+      }
+    ]
+  },
+
+  "AIRPORT": {
+    "title": "🚖 Airport Pickup",
+    "message": "Choose your airport transfer.",
+    "options": [
+      {
+        "id": "1",
+        "icon": "🚗",
+        "text": "Airport Pickup"
+      },
+      {
+        "id": "2",
+        "icon": "✈️",
+        "text": "Airport Drop-off"
+      }
+    ]
+  },
+
+  "FACILITIES": {
+    "title": "🏊 Hotel Facilities",
+    "message": "Available hotel facilities.",
+    "options": [
+      {
+        "id": "1",
+        "icon": "🏊",
+        "text": "Swimming Pool"
+      },
+      {
+        "id": "2",
+        "icon": "💪",
+        "text": "Gym"
+      },
+      {
+        "id": "3",
+        "icon": "💆",
+        "text": "Spa"
+      },
+      {
+        "id": "4",
+        "icon": "🧒",
+        "text": "Kids Play Area"
+      }
+    ]
+  },
+
+  "RESERVATION": {
+    "title": "📋 Reservation",
+    "message": "Reservation services.",
+    "options": [
+      {
+        "id": "1",
+        "icon": "🔍",
+        "text": "Check Reservation"
+      },
+      {
+        "id": "2",
+        "icon": "✏️",
+        "text": "Modify Reservation"
+      },
+      {
+        "id": "3",
+        "icon": "❌",
+        "text": "Cancel Reservation"
+      }
+    ]
+  },
+
+  "CONTACT": {
+    "title": "☎️ Reception",
+    "message": "Choose how you'd like to contact us.",
+    "options": [
+      {
+        "id": "1",
+        "icon": "📞",
+        "text": "Call Reception"
+      },
+      {
+        "id": "2",
+        "icon": "💬",
+        "text": "Live Chat"
+      },
+      {
+        "id": "3",
+        "icon": "📧",
+        "text": "Email Reception"
+      }
+    ]
+  },
+
+  "HELP": {
+    "title": "❓ Help Centre",
+    "message": "Frequently requested assistance.",
+    "options": [
+      {
+        "id": "1",
+        "icon": "🛎️",
+        "text": "Hotel Services"
+      },
+      {
+        "id": "2",
+        "icon": "⏰",
+        "text": "Check-in & Check-out"
+      },
+      {
+        "id": "3",
+        "icon": "💳",
+        "text": "Payment Methods"
+      },
+      {
+        "id": "4",
+        "icon": "📍",
+        "text": "Hotel Location"
+      }
+    ]
+  }
+}

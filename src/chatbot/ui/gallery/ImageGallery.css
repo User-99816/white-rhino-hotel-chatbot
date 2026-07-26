@@ -1,0 +1,634 @@
+/* ==========================================================
+   WHITE RHINO HOTEL
+   PREMIUM ROOM SHOWCASE
+========================================================== */
+
+.gallery-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.88);
+
+    backdrop-filter:blur(12px);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+
+    padding:40px;
+
+    animation:fadeIn .35s ease;
+
+}
+
+/* ==========================================================
+   CONTAINER
+========================================================== */
+
+.gallery-container{
+
+    width:100%;
+
+    max-width:1400px;
+
+    height:90vh;
+
+    background:#fff;
+
+    border-radius:26px;
+
+    overflow:hidden;
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,.45);
+
+    position:relative;
+
+}
+
+/* ==========================================================
+   CLOSE BUTTON
+========================================================== */
+
+.gallery-close{
+
+    position:absolute;
+
+    top:20px;
+
+    right:20px;
+
+    width:50px;
+
+    height:50px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#fff;
+
+    cursor:pointer;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.2);
+
+    transition:.25s;
+
+    z-index:100;
+
+}
+
+.gallery-close:hover{
+
+    transform:rotate(90deg);
+
+    background:#D4AF37;
+
+    color:#fff;
+
+}
+
+/* ==========================================================
+   LEFT SIDE
+========================================================== */
+
+.gallery-left{
+
+    display:flex;
+
+    flex-direction:column;
+
+    background:#f8fafc;
+
+}
+
+.gallery-main-image{
+
+    flex:1;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.gallery-main-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:transform .6s;
+
+}
+
+.gallery-main-image:hover img{
+
+    transform:scale(1.04);
+
+}
+
+/* ==========================================================
+   IMAGE COUNTER
+========================================================== */
+
+.gallery-counter{
+
+    position:absolute;
+
+    bottom:20px;
+
+    right:20px;
+
+    background:rgba(0,0,0,.65);
+
+    color:#fff;
+
+    padding:8px 14px;
+
+    border-radius:30px;
+
+    font-weight:600;
+
+}
+
+/* ==========================================================
+   ARROWS
+========================================================== */
+
+.gallery-arrow{
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:54px;
+
+    height:54px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.92);
+
+    cursor:pointer;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    transition:.3s;
+
+}
+
+.gallery-arrow:hover{
+
+    background:#D4AF37;
+
+    color:#fff;
+
+}
+
+.gallery-arrow.left{
+
+    left:18px;
+
+}
+
+.gallery-arrow.right{
+
+    right:18px;
+
+}
+
+/* ==========================================================
+   THUMBNAILS
+========================================================== */
+
+.gallery-thumbnails{
+
+    display:flex;
+
+    gap:12px;
+
+    padding:18px;
+
+    overflow-x:auto;
+
+    background:#fff;
+
+}
+
+.gallery-thumbnails::-webkit-scrollbar{
+
+    height:6px;
+
+}
+
+.gallery-thumbnails img{
+
+    width:90px;
+
+    height:70px;
+
+    object-fit:cover;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    opacity:.55;
+
+    border:3px solid transparent;
+
+    transition:.25s;
+
+}
+
+.gallery-thumbnails img:hover{
+
+    opacity:1;
+
+}
+
+.gallery-thumbnails img.active{
+
+    opacity:1;
+
+    border-color:#D4AF37;
+
+}
+
+/* ==========================================================
+   RIGHT PANEL
+========================================================== */
+
+.gallery-right{
+
+    padding:40px;
+
+    overflow-y:auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.room-header h1{
+
+    margin:0;
+
+    color:#111827;
+
+    font-size:2rem;
+
+}
+
+.room-stars{
+
+    display:flex;
+
+    gap:5px;
+
+    margin-top:10px;
+
+}
+
+.room-price{
+
+    margin-top:28px;
+
+    font-size:2.3rem;
+
+    font-weight:800;
+
+    color:#D4AF37;
+
+}
+
+.room-price span{
+
+    font-size:1rem;
+
+    color:#6b7280;
+
+}
+
+.availability{
+
+    margin-top:18px;
+
+    display:inline-flex;
+
+    width:max-content;
+
+    padding:10px 18px;
+
+    border-radius:40px;
+
+    background:#dcfce7;
+
+    color:#15803d;
+
+    font-weight:700;
+
+}
+
+/* ==========================================================
+   ROOM DETAILS
+========================================================== */
+
+.room-details{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:15px;
+
+    margin-top:35px;
+
+}
+
+.room-details div{
+
+    background:#f3f4f6;
+
+    border-radius:16px;
+
+    padding:18px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-weight:600;
+
+}
+
+.room-details svg{
+
+    color:#D4AF37;
+
+}
+
+/* ==========================================================
+   FEATURES
+========================================================== */
+
+.gallery-right h3{
+
+    margin-top:35px;
+
+    margin-bottom:20px;
+
+    color:#111827;
+
+}
+
+.room-features{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:15px;
+
+}
+
+.room-features span{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:14px;
+
+    border-radius:14px;
+
+    background:#f8fafc;
+
+    font-weight:600;
+
+}
+
+.room-features svg{
+
+    color:#16a34a;
+
+}
+
+/* ==========================================================
+   BOOK BUTTON
+========================================================== */
+
+.gallery-book-btn{
+
+    margin-top:auto;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:16px;
+
+    background:linear-gradient(
+        135deg,
+        #D4AF37,
+        #b9911c
+    );
+
+    color:#fff;
+
+    font-size:1.05rem;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
+    transition:.25s;
+
+}
+
+.gallery-book-btn:hover:not(:disabled){
+
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 15px 35px rgba(212,175,55,.45);
+
+}
+
+.gallery-book-btn:disabled{
+
+    background:#9ca3af;
+
+    cursor:not-allowed;
+
+}
+
+/* ==========================================================
+   ANIMATION
+========================================================== */
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.96);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media(max-width:1100px){
+
+    .gallery-container{
+
+        grid-template-columns:1fr;
+
+        height:95vh;
+
+        overflow:auto;
+
+    }
+
+    .gallery-left{
+
+        height:420px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .gallery-overlay{
+
+        padding:10px;
+
+    }
+
+    .gallery-container{
+
+        border-radius:18px;
+
+    }
+
+    .gallery-right{
+
+        padding:25px;
+
+    }
+
+    .room-details{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .room-features{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .room-price{
+
+        font-size:1.8rem;
+
+    }
+
+    .gallery-main-image{
+
+        height:320px;
+
+    }
+
+    .gallery-thumbnails img{
+
+        width:75px;
+
+        height:60px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .gallery-arrow{
+
+        width:44px;
+
+        height:44px;
+
+    }
+
+    .gallery-close{
+
+        width:42px;
+
+        height:42px;
+
+    }
+
+    .room-header h1{
+
+        font-size:1.6rem;
+
+    }
+
+}

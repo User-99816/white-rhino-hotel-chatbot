@@ -1,0 +1,1180 @@
+/* =====================================================
+   WHITE RHINO HOTEL
+   BOOKING RENDERER
+===================================================== */
+
+.booking-renderer{
+
+    width:100%;
+
+}
+
+/* ==========================================
+   HORIZONTAL CAROUSEL
+========================================== */
+
+.rooms-carousel{
+
+    display:flex;
+
+    gap:18px;
+
+    overflow-x:auto;
+
+    overflow-y:hidden;
+
+    padding:4px 2px 12px;
+
+    scroll-behavior:smooth;
+
+    scroll-snap-type:x mandatory;
+
+}
+
+.rooms-carousel::-webkit-scrollbar{
+
+    height:8px;
+
+}
+
+.rooms-carousel::-webkit-scrollbar-thumb{
+
+    background:#d1d5db;
+
+    border-radius:20px;
+
+}
+
+.rooms-carousel::-webkit-scrollbar-track{
+
+    background:transparent;
+
+}
+
+/* ==========================================
+   ROOM CARD
+========================================== */
+
+.room-card{
+
+    flex:0 0 310px;
+
+    background:#fff;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:
+
+        0 8px 25px rgba(0,0,0,.10);
+
+    scroll-snap-align:start;
+
+    transition:.3s;
+
+}
+
+.room-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+
+        0 18px 40px rgba(0,0,0,.18);
+
+}
+
+/* ==========================================
+   IMAGE
+========================================== */
+
+.room-image-wrapper{
+
+    position:relative;
+
+    height:220px;
+
+    overflow:hidden;
+
+}
+
+.room-image{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.4s;
+
+}
+
+.room-card:hover .room-image{
+
+    transform:scale(1.06);
+
+}
+
+/* ==========================================
+   RATING
+========================================== */
+
+.room-rating{
+
+    position:absolute;
+
+    top:12px;
+
+    left:12px;
+
+    background:#fff;
+
+    padding:6px 10px;
+
+    border-radius:999px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.15);
+
+}
+
+/* ==========================================
+   BADGE
+========================================== */
+
+.room-badge{
+
+    position:absolute;
+
+    right:12px;
+
+    top:12px;
+
+    background:#dc2626;
+
+    color:#fff;
+
+    padding:6px 10px;
+
+    border-radius:999px;
+
+    font-size:12px;
+
+    font-weight:700;
+
+}
+
+/* ==========================================
+   CONTENT
+========================================== */
+
+.room-content{
+
+    padding:18px;
+
+}
+
+.room-content h3{
+
+    margin:0;
+
+    color:#111827;
+
+    font-size:20px;
+
+}
+
+.room-description{
+
+    margin-top:8px;
+
+    color:#6b7280;
+
+    line-height:1.6;
+
+    font-size:14px;
+
+}
+
+/* ==========================================
+   META
+========================================== */
+
+.room-meta{
+
+    display:grid;
+
+    grid-template-columns:1fr;
+
+    gap:6px;
+
+    margin-top:16px;
+
+    color:#374151;
+
+    font-size:14px;
+
+}
+
+/* ==========================================
+   FEATURES
+========================================== */
+
+.features{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:8px;
+
+    margin-top:18px;
+
+}
+
+.feature{
+
+    background:#eff6ff;
+
+    color:#2563eb;
+
+    padding:6px 12px;
+
+    border-radius:999px;
+
+    font-size:12px;
+
+    font-weight:600;
+
+}
+
+/* ==========================================
+   PRICE
+========================================== */
+
+.price-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-top:24px;
+
+    border-top:1px solid #eee;
+
+    padding-top:18px;
+
+}
+
+.price-row h2{
+
+    margin:0;
+
+    color:#111827;
+
+    font-size:24px;
+
+}
+
+.price-row span{
+
+    display:block;
+
+    color:#6b7280;
+
+    font-size:12px;
+
+}
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+.select-room-btn{
+
+    border:none;
+
+    background:#2563eb;
+
+    color:white;
+
+    padding:12px 20px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    transition:.25s;
+
+}
+
+.select-room-btn:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-2px);
+
+}
+
+/* ==========================================
+   DETAILS PAGE
+========================================== */
+
+.room-details{
+
+    background:white;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+}
+
+.details-image{
+
+    width:100%;
+
+    height:240px;
+
+    object-fit:cover;
+
+}
+
+.detail-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:10px;
+
+    padding:18px;
+
+}
+
+.feature-list{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:10px;
+
+    padding:0 18px 18px;
+
+}
+
+.price-box{
+
+    background:#f9fafb;
+
+    padding:18px;
+
+    border-top:1px solid #eee;
+
+}
+
+/* ==========================================
+   AVAILABILITY
+========================================== */
+
+.availability-card{
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:20px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.availability-status{
+
+    font-size:18px;
+
+    font-weight:700;
+
+}
+
+.availability-status.available{
+
+    color:#16a34a;
+
+}
+
+.availability-status.last-room{
+
+    color:#ea580c;
+
+}
+
+.availability-status.sold-out{
+
+    color:#dc2626;
+
+}
+
+.pricing-summary{
+
+    margin:20px 0;
+
+    display:flex;
+
+    justify-content:space-between;
+
+}
+
+/* ==========================================
+   PAYMENT
+========================================== */
+
+.payment-card{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+}
+
+.payment-option{
+
+    border:none;
+
+    background:#f3f4f6;
+
+    padding:16px;
+
+    border-radius:14px;
+
+    text-align:left;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    transition:.25s;
+
+}
+
+.payment-option:hover{
+
+    background:#2563eb;
+
+    color:white;
+
+}
+
+/* ==========================================
+   CONFIRMATION
+========================================== */
+
+.confirmation-card{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:24px;
+
+    text-align:center;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+}
+
+.booking-summary{
+
+    margin-top:20px;
+
+    display:grid;
+
+    gap:10px;
+
+    text-align:left;
+
+}
+
+.booking-summary p{
+
+    display:flex;
+
+    justify-content:space-between;
+
+}
+
+/* ==========================================
+   PRIMARY BUTTON
+========================================== */
+
+.primary-btn{
+
+    width:100%;
+
+    margin-top:18px;
+
+    border:none;
+
+    background:#2563eb;
+
+    color:white;
+
+    padding:15px;
+
+    border-radius:14px;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.primary-btn:hover{
+
+    background:#1d4ed8;
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media(max-width:768px){
+
+    .room-card{
+
+        flex:0 0 92%;
+
+    }
+
+    .detail-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .feature-list{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .price-row{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:14px;
+
+    }
+
+    .select-room-btn{
+
+        width:100%;
+
+    }
+
+}
+
+/* =====================================================
+   RESERVATION CONFIRMATION
+===================================================== */
+
+.reservation-card{
+
+    width:100%;
+
+    max-width:700px;
+
+    margin:30px auto;
+
+    background:#ffffff;
+
+    border-radius:22px;
+
+    padding:35px;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.12);
+
+    border:1px solid #ececec;
+
+    text-align:center;
+
+    animation:fadeReservation .45s ease;
+
+}
+
+.reservation-success{
+
+    width:90px;
+
+    height:90px;
+
+    margin:0 auto 20px;
+
+    border-radius:50%;
+
+    background:#e8fff0;
+
+    color:#16a34a;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:42px;
+
+    font-weight:700;
+
+    box-shadow:0 10px 25px rgba(22,163,74,.18);
+
+}
+
+.reservation-card h2{
+
+    margin:0;
+
+    color:#1e293b;
+
+    font-size:32px;
+
+    font-weight:700;
+
+}
+
+.reservation-card>p{
+
+    margin-top:12px;
+
+    color:#64748b;
+
+    line-height:1.7;
+
+}
+
+/* =====================================================
+   RESERVATION ID
+===================================================== */
+
+.reservation-id-box{
+
+    margin:35px 0;
+
+    padding:28px;
+
+    border-radius:18px;
+
+    background:linear-gradient(
+        135deg,
+        #0f172a,
+        #1e293b
+    );
+
+    color:#fff;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.reservation-id-box::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-80px;
+
+    right:-80px;
+
+    width:180px;
+
+    height:180px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.05);
+
+}
+
+.reservation-id-box span{
+
+    display:block;
+
+    font-size:14px;
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+    opacity:.8;
+
+    margin-bottom:10px;
+
+}
+
+.reservation-id-box h1{
+
+    margin:0;
+
+    font-size:42px;
+
+    letter-spacing:4px;
+
+    font-weight:800;
+
+    color:#fff;
+
+}
+
+/* =====================================================
+   BOOKING SUMMARY
+===================================================== */
+
+.booking-summary{
+
+    margin-top:30px;
+
+    border-radius:18px;
+
+    background:#f8fafc;
+
+    overflow:hidden;
+
+    border:1px solid #e5e7eb;
+
+}
+
+.booking-summary p{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 24px;
+
+    margin:0;
+
+    border-bottom:1px solid #e5e7eb;
+
+    color:#475569;
+
+}
+
+.booking-summary p:last-child{
+
+    border-bottom:none;
+
+}
+
+.booking-summary strong{
+
+    color:#0f172a;
+
+    font-weight:700;
+
+}
+
+/* =====================================================
+   RECEPTION NOTICE
+===================================================== */
+
+.reservation-note{
+
+    margin-top:30px;
+
+    padding:22px;
+
+    background:#fff8e6;
+
+    border-left:6px solid #f59e0b;
+
+    border-radius:14px;
+
+    color:#92400e;
+
+    text-align:left;
+
+    line-height:1.8;
+
+}
+
+.reservation-note strong{
+
+    display:block;
+
+    font-size:16px;
+
+}
+
+/* =====================================================
+   ANIMATION
+===================================================== */
+
+@keyframes fadeReservation{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:768px){
+
+    .reservation-card{
+
+        padding:22px;
+
+        margin:15px;
+
+    }
+
+    .reservation-id-box h1{
+
+        font-size:30px;
+
+        letter-spacing:2px;
+
+    }
+
+    .booking-summary p{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:6px;
+
+    }
+
+}
+
+/* =====================================================
+   RESERVATION CONFIRMATION
+===================================================== */
+
+.reservation-card{
+    width:100%;
+    max-width:520px;
+    margin:20px auto;
+    background:#fff;
+    border-radius:24px;
+    overflow:hidden;
+    box-shadow:0 20px 50px rgba(0,0,0,.12);
+    border:1px solid #ececec;
+    animation:reservationPop .45s ease;
+}
+
+/* Green Header */
+
+.reservation-success{
+    width:90px;
+    height:90px;
+    margin:30px auto 15px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#0ba360,#3cba92);
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:42px;
+    box-shadow:0 15px 35px rgba(11,163,96,.35);
+}
+
+.reservation-card h2{
+    text-align:center;
+    color:#222;
+    margin-bottom:8px;
+    font-size:28px;
+    font-weight:700;
+}
+
+.reservation-card>p{
+    text-align:center;
+    color:#777;
+    padding:0 35px;
+    line-height:1.7;
+    margin-bottom:25px;
+}
+
+/* =====================================================
+   Reservation ID
+===================================================== */
+
+.reservation-id-box{
+
+    margin:0 25px 30px;
+
+    border-radius:18px;
+
+    background:linear-gradient(135deg,#b8860b,#d4af37);
+
+    color:white;
+
+    text-align:center;
+
+    padding:25px;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.reservation-id-box::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-50px;
+
+    left:-50px;
+
+    width:150px;
+
+    height:150px;
+
+    background:rgba(255,255,255,.15);
+
+    border-radius:50%;
+}
+
+.reservation-id-box span{
+
+    display:block;
+
+    letter-spacing:2px;
+
+    font-size:13px;
+
+    text-transform:uppercase;
+
+    opacity:.9;
+
+    margin-bottom:10px;
+}
+
+.reservation-id-box h1{
+
+    margin:0;
+
+    font-size:34px;
+
+    letter-spacing:4px;
+
+    font-weight:800;
+}
+
+/* =====================================================
+   Booking Summary
+===================================================== */
+
+.booking-summary{
+
+    margin:0 25px;
+
+    border-radius:16px;
+
+    background:#fafafa;
+
+    overflow:hidden;
+
+    border:1px solid #eee;
+}
+
+.booking-summary p{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:16px 20px;
+
+    margin:0;
+
+    border-bottom:1px solid #ececec;
+
+    font-size:15px;
+}
+
+.booking-summary p:last-child{
+
+    border-bottom:none;
+}
+
+.booking-summary strong{
+
+    color:#222;
+
+    font-weight:700;
+}
+
+.status-success{
+
+    color:#0ba360;
+}
+
+/* =====================================================
+   Reception Notice
+===================================================== */
+
+.reservation-note{
+
+    margin:25px;
+
+    padding:18px;
+
+    border-radius:16px;
+
+    background:#fff8e6;
+
+    border-left:5px solid #d4af37;
+
+    color:#5a4600;
+
+    line-height:1.7;
+}
+
+/* =====================================================
+   Copy Button
+===================================================== */
+
+.reservation-card .primary-btn{
+
+    width:calc(100% - 50px);
+
+    margin:0 25px 30px;
+
+    border:none;
+
+    border-radius:14px;
+
+    padding:16px;
+
+    cursor:pointer;
+
+    background:linear-gradient(135deg,#111,#333);
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    transition:.25s;
+}
+
+.reservation-card .primary-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* =====================================================
+   Animation
+===================================================== */
+
+@keyframes reservationPop{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px) scale(.95);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0) scale(1);
+
+    }
+
+}
+
+/* =====================================================
+   Mobile
+===================================================== */
+
+@media(max-width:600px){
+
+.reservation-card{
+
+    margin:10px;
+
+    border-radius:18px;
+
+}
+
+.reservation-id-box h1{
+
+    font-size:26px;
+
+    letter-spacing:2px;
+
+}
+
+.booking-summary p{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:6px;
+
+}
+
+.reservation-card h2{
+
+    font-size:24px;
+
+}
+
+}

@@ -1,0 +1,577 @@
+/* =====================================================
+   WHITE RHINO HOTEL
+   TRANSFER CONFIRMATION
+   PREMIUM MOBILE DESIGN
+===================================================== */
+
+.confirmation-page{
+
+    max-width:420px;
+
+    margin:30px auto;
+
+    padding:20px;
+
+    background:#f4f7fb;
+
+    font-family:"Segoe UI",sans-serif;
+
+}
+
+/* ==========================================
+   HERO
+========================================== */
+
+.confirmation-hero{
+
+    background:linear-gradient(135deg,#0f766e,#14b8a6);
+
+    color:white;
+
+    text-align:center;
+
+    padding:30px 22px;
+
+    border-radius:24px;
+
+    margin-bottom:22px;
+
+    box-shadow:0 15px 35px rgba(15,118,110,.25);
+
+}
+
+.success-circle{
+
+    width:90px;
+
+    height:90px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:white;
+
+    color:#16a34a;
+
+    font-size:46px;
+
+    font-weight:700;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin-bottom:20px;
+
+    animation:pop .5s ease;
+
+}
+
+@keyframes pop{
+
+    from{
+
+        transform:scale(.5);
+
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}
+
+.confirmation-pill{
+
+    display:inline-block;
+
+    background:rgba(255,255,255,.2);
+
+    padding:8px 16px;
+
+    border-radius:30px;
+
+    font-size:12px;
+
+    letter-spacing:1px;
+
+    margin-bottom:15px;
+
+}
+
+.confirmation-hero h1{
+
+    font-size:28px;
+
+    margin-bottom:12px;
+
+}
+
+.confirmation-hero p{
+
+    line-height:1.7;
+
+    opacity:.95;
+
+}
+
+/* ==========================================
+   CARDS
+========================================== */
+
+.booking-card,
+.transfer-card,
+.timeline-card,
+.concierge-card{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:22px;
+
+    margin-bottom:20px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.booking-card h2,
+.transfer-card h2,
+.timeline-card h2,
+.concierge-card h2{
+
+    margin-bottom:18px;
+
+    color:#111827;
+
+    font-size:20px;
+
+}
+
+/* ==========================================
+   ROWS
+========================================== */
+
+.booking-row,
+.detail-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:12px 0;
+
+    border-bottom:1px solid #edf2f7;
+
+}
+
+.booking-row:last-child,
+.detail-row:last-child{
+
+    border:none;
+
+}
+
+.booking-row span,
+.detail-row span{
+
+    color:#6b7280;
+
+    font-size:14px;
+
+}
+
+.booking-row strong,
+.detail-row strong{
+
+    color:#111827;
+
+    font-size:15px;
+
+}
+
+.status-success{
+
+    color:#16a34a;
+
+    font-weight:700;
+
+}
+
+/* ==========================================
+   DRIVER CARD
+========================================== */
+
+.driver-status-card{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:22px;
+
+    display:flex;
+
+    gap:18px;
+
+    align-items:flex-start;
+
+    margin-bottom:20px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.driver-icon{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+    background:#ecfeff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:28px;
+
+    flex-shrink:0;
+
+}
+
+.driver-status{
+
+    display:inline-block;
+
+    margin-top:10px;
+
+    background:#fef3c7;
+
+    color:#92400e;
+
+    padding:6px 14px;
+
+    border-radius:20px;
+
+    font-size:12px;
+
+    font-weight:700;
+
+}
+
+/* ==========================================
+   TIMELINE
+========================================== */
+
+.timeline{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+.timeline-item{
+
+    display:flex;
+
+    gap:16px;
+
+}
+
+.timeline-dot{
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#e5e7eb;
+
+    font-size:18px;
+
+    flex-shrink:0;
+
+}
+
+.timeline-item.completed .timeline-dot{
+
+    background:#16a34a;
+
+    color:white;
+
+}
+
+.timeline-item.active .timeline-dot{
+
+    background:#f59e0b;
+
+    color:white;
+
+}
+
+.timeline-item h4{
+
+    margin-bottom:6px;
+
+    color:#111827;
+
+}
+
+.timeline-item p{
+
+    color:#6b7280;
+
+    line-height:1.6;
+
+    font-size:14px;
+
+}
+
+/* ==========================================
+   CONCIERGE
+========================================== */
+
+.concierge-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.concierge-item{
+
+    display:flex;
+
+    gap:16px;
+
+    align-items:flex-start;
+
+}
+
+.concierge-icon{
+
+    width:50px;
+
+    height:50px;
+
+    border-radius:50%;
+
+    background:#ecfeff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:22px;
+
+    flex-shrink:0;
+
+}
+
+.concierge-item h4{
+
+    margin-bottom:5px;
+
+}
+
+.concierge-item p{
+
+    color:#6b7280;
+
+    line-height:1.6;
+
+    font-size:14px;
+
+}
+
+/* ==========================================
+   GUARANTEE
+========================================== */
+
+.guarantee-card{
+
+    display:flex;
+
+    gap:18px;
+
+    align-items:flex-start;
+
+    background:#ecfeff;
+
+    border-left:5px solid #0f766e;
+
+    border-radius:20px;
+
+    padding:22px;
+
+    margin-bottom:20px;
+
+}
+
+.guarantee-badge{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+    background:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:28px;
+
+    flex-shrink:0;
+
+}
+
+.guarantee-card h3{
+
+    color:#0f766e;
+
+    margin-bottom:8px;
+
+}
+
+.guarantee-card p{
+
+    color:#4b5563;
+
+    line-height:1.7;
+
+}
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.confirmation-actions{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+.secondary-btn{
+
+    border:none;
+
+    background:#e5e7eb;
+
+    padding:16px;
+
+    border-radius:16px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.secondary-btn:hover{
+
+    background:#d1d5db;
+
+}
+
+.primary-btn{
+
+    border:none;
+
+    background:linear-gradient(135deg,#0f766e,#14b8a6);
+
+    color:white;
+
+    padding:18px;
+
+    border-radius:16px;
+
+    cursor:pointer;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+.primary-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 15px 30px rgba(15,118,110,.3);
+
+}
+
+/* ==========================================
+   EMPTY STATE
+========================================== */
+
+.confirmation-empty{
+
+    max-width:420px;
+
+    margin:60px auto;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:22px;
+
+    text-align:center;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.confirmation-empty h2{
+
+    color:#6b7280;
+
+}

@@ -1,0 +1,450 @@
+/* ==========================================================
+   WHITE RHINO HOTEL
+   BOOKING CONFIRMATION
+========================================================== */
+
+.booking-confirmation{
+
+    max-width:850px;
+
+    margin:auto;
+
+    background:#ffffff;
+
+    border-radius:24px;
+
+    padding:35px;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.08);
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:28px;
+
+}
+
+/* ==========================================================
+   SUCCESS HEADER
+========================================================== */
+
+.confirmation-header{
+
+    text-align:center;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:14px;
+
+}
+
+.success-icon{
+
+    color:#16A34A;
+
+}
+
+.confirmation-header h1{
+
+    margin:0;
+
+    color:#111827;
+
+    font-size:2rem;
+
+    font-weight:700;
+
+}
+
+.confirmation-header p{
+
+    margin:0;
+
+    color:#6B7280;
+
+    line-height:1.6;
+
+}
+
+.confirmation-header strong{
+
+    color:#111827;
+
+}
+
+/* ==========================================================
+   BOOKING REFERENCE
+========================================================== */
+
+.reference-card{
+
+    background:linear-gradient(
+        135deg,
+        #111827,
+        #1F2937
+    );
+
+    color:#ffffff;
+
+    border-radius:20px;
+
+    padding:28px;
+
+    text-align:center;
+
+}
+
+.reference-card span{
+
+    display:block;
+
+    opacity:.8;
+
+    margin-bottom:10px;
+
+}
+
+.reference-card h2{
+
+    margin:0;
+
+    letter-spacing:2px;
+
+    font-size:2rem;
+
+    color:#D4AF37;
+
+}
+
+.reference-card button{
+
+    margin-top:18px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#D4AF37;
+
+    color:#fff;
+
+    padding:12px 18px;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.reference-card button:hover{
+
+    transform:translateY(-2px);
+
+    background:#b9911c;
+
+}
+
+/* ==========================================================
+   INFO CARDS
+========================================================== */
+
+.confirmation-card{
+
+    background:#F9FAFB;
+
+    border:1px solid #E5E7EB;
+
+    border-radius:18px;
+
+    padding:24px;
+
+}
+
+.confirmation-card h3{
+
+    margin:0 0 20px;
+
+    color:#111827;
+
+    font-size:1.2rem;
+
+}
+
+/* ==========================================================
+   ROWS
+========================================================== */
+
+.row{
+
+    display:grid;
+
+    grid-template-columns:30px 1fr auto;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:12px 0;
+
+    border-bottom:1px solid #ECECEC;
+
+}
+
+.row:last-child{
+
+    border-bottom:none;
+
+}
+
+.row svg{
+
+    color:#D4AF37;
+
+}
+
+.row span{
+
+    color:#6B7280;
+
+}
+
+.row strong{
+
+    color:#111827;
+
+    text-align:right;
+
+}
+
+/* ==========================================================
+   MESSAGE
+========================================================== */
+
+.confirmation-message{
+
+    background:#ECFDF5;
+
+    border-left:6px solid #16A34A;
+
+    border-radius:14px;
+
+    padding:20px;
+
+    color:#166534;
+
+    line-height:1.8;
+
+}
+
+.confirmation-message strong{
+
+    color:#15803D;
+
+}
+
+/* ==========================================================
+   ACTION BUTTONS
+========================================================== */
+
+.confirmation-actions{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:16px;
+
+}
+
+.confirmation-actions button{
+
+    flex:1;
+
+    min-width:180px;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:14px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    transition:.3s;
+
+}
+
+/* Download */
+
+.download-btn{
+
+    background:#111827;
+
+    color:#ffffff;
+
+}
+
+.download-btn:hover{
+
+    background:#1F2937;
+
+    transform:translateY(-2px);
+
+}
+
+/* WhatsApp */
+
+.whatsapp-btn{
+
+    background:#25D366;
+
+    color:#ffffff;
+
+}
+
+.whatsapp-btn:hover{
+
+    background:#1EBE5B;
+
+    transform:translateY(-2px);
+
+}
+
+/* Home */
+
+.home-btn{
+
+    background:linear-gradient(
+        135deg,
+        #D4AF37,
+        #B9911C
+    );
+
+    color:#ffffff;
+
+    box-shadow:0 10px 25px rgba(212,175,55,.25);
+
+}
+
+.home-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 15px 35px rgba(212,175,55,.40);
+
+}
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media(max-width:768px){
+
+    .booking-confirmation{
+
+        padding:24px;
+
+    }
+
+    .confirmation-header h1{
+
+        font-size:1.6rem;
+
+    }
+
+    .reference-card h2{
+
+        font-size:1.5rem;
+
+        word-break:break-word;
+
+    }
+
+    .row{
+
+        grid-template-columns:24px 1fr;
+
+        gap:10px;
+
+    }
+
+    .row strong{
+
+        grid-column:2;
+
+        text-align:left;
+
+        margin-top:4px;
+
+    }
+
+    .confirmation-actions{
+
+        flex-direction:column;
+
+    }
+
+    .confirmation-actions button{
+
+        width:100%;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .booking-confirmation{
+
+        padding:18px;
+
+    }
+
+    .confirmation-card{
+
+        padding:18px;
+
+    }
+
+    .reference-card{
+
+        padding:20px;
+
+    }
+
+    .confirmation-header h1{
+
+        font-size:1.4rem;
+
+    }
+
+    .reference-card h2{
+
+        font-size:1.3rem;
+
+    }
+
+}

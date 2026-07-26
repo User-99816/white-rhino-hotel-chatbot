@@ -1,0 +1,435 @@
+/* ======================================================
+   WHITE RHINO HOTEL
+   LIVE TRACKING
+   Premium Small Smartphone Design
+   ====================================================== */
+
+.tracking-page{
+    width:100%;
+    max-width:390px;
+    margin:0 auto;
+    padding:16px;
+    box-sizing:border-box;
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+    animation:fadeIn .35s ease;
+    font-family:Inter,Segoe UI,sans-serif;
+}
+
+/* ======================================================
+   HEADER
+   ====================================================== */
+
+.tracking-header{
+    background:#ffffff;
+    border-radius:20px;
+    padding:22px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(0,0,0,.06);
+    border:1px solid #ececec;
+}
+
+.tracking-pill{
+    display:inline-block;
+    background:#0f8f4f;
+    color:#fff;
+    padding:6px 14px;
+    border-radius:50px;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:.5px;
+    margin-bottom:12px;
+}
+
+.tracking-header h1{
+    margin:0;
+    font-size:24px;
+    color:#222;
+}
+
+.tracking-header p{
+    margin-top:10px;
+    color:#666;
+    line-height:1.6;
+    font-size:14px;
+}
+
+/* ======================================================
+   MAP
+   ====================================================== */
+
+.tracking-map{
+    position:relative;
+    height:220px;
+    border-radius:20px;
+    overflow:hidden;
+    background:linear-gradient(135deg,#dff5df,#eef8ff);
+    border:1px solid #e5e5e5;
+    box-shadow:0 8px 22px rgba(0,0,0,.06);
+}
+
+.map-background{
+    position:absolute;
+    inset:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:90px;
+    opacity:.08;
+}
+
+.hotel-marker,
+.airport-marker,
+.vehicle-marker{
+    position:absolute;
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#fff;
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+    font-size:24px;
+}
+
+.hotel-marker{
+    left:20px;
+    bottom:25px;
+}
+
+.airport-marker{
+    right:20px;
+    top:25px;
+}
+
+.vehicle-marker{
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    animation:drive 2.2s ease-in-out infinite;
+}
+
+/* ======================================================
+   DRIVER CARD
+   ====================================================== */
+
+.tracking-driver-card{
+    display:flex;
+    gap:16px;
+    align-items:center;
+    background:#fff;
+    padding:18px;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,.06);
+}
+
+.driver-avatar{
+    width:72px;
+    height:72px;
+    border-radius:50%;
+    background:#0f8f4f;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:34px;
+}
+
+.driver-info h2{
+    margin:0;
+    font-size:20px;
+}
+
+.driver-info p{
+    margin:4px 0;
+    color:#666;
+    font-size:14px;
+}
+
+/* ======================================================
+   ETA
+   ====================================================== */
+
+.tracking-eta-card{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    background:#fff;
+    padding:20px;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,.06);
+}
+
+.eta-circle{
+    width:85px;
+    height:85px;
+    border-radius:50%;
+    background:#0f8f4f;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:30px;
+    font-weight:700;
+}
+
+.eta-details h2{
+    margin:0;
+    font-size:28px;
+}
+
+.eta-details p{
+    margin-top:6px;
+    color:#777;
+}
+
+/* ======================================================
+   PROGRESS
+   ====================================================== */
+
+.tracking-progress-card{
+    background:#fff;
+    padding:20px;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,.06);
+}
+
+.tracking-progress-card h2{
+    margin:0 0 18px;
+    font-size:20px;
+}
+
+.progress-line{
+    width:100%;
+    height:10px;
+    background:#ececec;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.progress-fill{
+    width:70%;
+    height:100%;
+    background:linear-gradient(90deg,#0f8f4f,#33c96d);
+    border-radius:20px;
+    animation:progressMove 2s infinite alternate;
+}
+
+.progress-labels{
+    display:flex;
+    justify-content:space-between;
+    margin-top:12px;
+    font-size:12px;
+    color:#666;
+}
+
+/* ======================================================
+   TRIP
+   ====================================================== */
+
+.tracking-trip-card{
+    background:#fff;
+    padding:20px;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,.06);
+}
+
+.tracking-trip-card h2{
+    margin-bottom:16px;
+}
+
+.trip-row{
+    display:flex;
+    justify-content:space-between;
+    padding:10px 0;
+    border-bottom:1px solid #f0f0f0;
+}
+
+.trip-row:last-child{
+    border-bottom:none;
+}
+
+.trip-row span{
+    color:#777;
+}
+
+.trip-row strong{
+    color:#222;
+}
+
+/* ======================================================
+   BUTTONS
+   ====================================================== */
+
+.tracking-actions{
+    display:flex;
+    gap:12px;
+}
+
+.call-driver-btn,
+.message-driver-btn{
+    flex:1;
+    border:none;
+    border-radius:14px;
+    padding:14px;
+    cursor:pointer;
+    font-size:15px;
+    font-weight:600;
+    transition:.25s;
+}
+
+.call-driver-btn{
+    background:#0f8f4f;
+    color:#fff;
+}
+
+.call-driver-btn:hover{
+    transform:translateY(-2px);
+}
+
+.message-driver-btn{
+    background:#eef4ff;
+    color:#2452d6;
+}
+
+.message-driver-btn:hover{
+    background:#dde8ff;
+}
+
+/* ======================================================
+   STATUS
+   ====================================================== */
+
+.tracking-status-card{
+    display:flex;
+    gap:16px;
+    background:#fff;
+    padding:18px;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,.06);
+}
+
+.status-icon{
+    font-size:34px;
+}
+
+.tracking-status-card h3{
+    margin:0;
+}
+
+.tracking-status-card p{
+    margin-top:8px;
+    color:#666;
+    line-height:1.6;
+}
+
+/* ======================================================
+   ARRIVAL
+   ====================================================== */
+
+.arrival-card{
+    background:linear-gradient(135deg,#0f8f4f,#28b463);
+    color:#fff;
+    border-radius:22px;
+    text-align:center;
+    padding:28px;
+}
+
+.arrival-icon{
+    font-size:55px;
+    margin-bottom:10px;
+}
+
+.arrival-card h2{
+    margin:0;
+}
+
+.arrival-card p{
+    margin-top:12px;
+    line-height:1.6;
+}
+
+/* ======================================================
+   FOOTER
+   ====================================================== */
+
+.tracking-footer{
+    text-align:center;
+    color:#888;
+    font-size:13px;
+    padding-bottom:20px;
+}
+
+/* ======================================================
+   ANIMATIONS
+   ====================================================== */
+
+@keyframes drive{
+
+    0%{
+        transform:translate(-50%,-50%) translateX(-18px);
+    }
+
+    100%{
+        transform:translate(-50%,-50%) translateX(18px);
+    }
+
+}
+
+@keyframes progressMove{
+
+    from{
+        width:58%;
+    }
+
+    to{
+        width:82%;
+    }
+
+}
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(15px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* ======================================================
+   MOBILE
+   ====================================================== */
+
+@media(max-width:420px){
+
+    .tracking-page{
+        padding:12px;
+    }
+
+    .tracking-actions{
+        flex-direction:column;
+    }
+
+    .tracking-header h1{
+        font-size:22px;
+    }
+
+    .tracking-map{
+        height:200px;
+    }
+
+    .eta-circle{
+        width:72px;
+        height:72px;
+        font-size:26px;
+    }
+
+}

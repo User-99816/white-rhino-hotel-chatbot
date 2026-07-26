@@ -1,0 +1,386 @@
+/* =====================================================
+   WHITE RHINO HOTEL
+   TRANSFER RATING
+===================================================== */
+
+.rating-container{
+
+    width:100%;
+
+    max-width:650px;
+
+    margin:auto;
+
+    background:#ffffff;
+
+    border-radius:24px;
+
+    padding:35px;
+
+    box-shadow:0 18px 45px rgba(0,0,0,.08);
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:28px;
+
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.rating-header{
+
+    text-align:center;
+
+}
+
+.rating-icon{
+
+    width:90px;
+
+    height:90px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:linear-gradient(
+        135deg,
+        #fbbf24,
+        #f59e0b
+    );
+
+    color:white;
+
+    font-size:42px;
+
+    margin-bottom:20px;
+
+    box-shadow:0 10px 25px rgba(245,158,11,.35);
+
+}
+
+.rating-header h2{
+
+    font-size:30px;
+
+    color:#111827;
+
+    margin-bottom:10px;
+
+}
+
+.rating-header p{
+
+    color:#6b7280;
+
+    font-size:15px;
+
+}
+
+/* ==========================================
+   DRIVER CARD
+========================================== */
+
+.rating-driver{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    padding:20px;
+
+    background:#f9fafb;
+
+    border-radius:18px;
+
+    border:1px solid #e5e7eb;
+
+}
+
+.rating-avatar{
+
+    width:80px;
+
+    height:80px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#dbeafe;
+
+    font-size:38px;
+
+}
+
+.rating-driver h3{
+
+    margin-bottom:8px;
+
+    color:#111827;
+
+}
+
+.rating-driver p{
+
+    margin:4px 0;
+
+    color:#6b7280;
+
+}
+
+/* ==========================================
+   STARS
+========================================== */
+
+.rating-stars{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:14px;
+
+}
+
+.rating-stars span{
+
+    font-size:48px;
+
+    color:#d1d5db;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    user-select:none;
+
+}
+
+.rating-stars span:hover{
+
+    transform:scale(1.15);
+
+}
+
+.rating-stars span.active{
+
+    color:#fbbf24;
+
+    text-shadow:0 0 12px rgba(251,191,36,.45);
+
+}
+
+/* ==========================================
+   SCORE
+========================================== */
+
+.rating-value{
+
+    text-align:center;
+
+    font-size:28px;
+
+    font-weight:bold;
+
+    color:#0f766e;
+
+}
+
+/* ==========================================
+   TEXTAREA
+========================================== */
+
+.rating-container textarea{
+
+    width:100%;
+
+    min-height:150px;
+
+    padding:18px;
+
+    border:1px solid #d1d5db;
+
+    border-radius:16px;
+
+    resize:vertical;
+
+    font-size:15px;
+
+    font-family:inherit;
+
+    transition:.3s;
+
+    outline:none;
+
+}
+
+.rating-container textarea:focus{
+
+    border-color:#0f766e;
+
+    box-shadow:0 0 0 4px rgba(15,118,110,.12);
+
+}
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+.rating-submit{
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:16px;
+
+    border-radius:14px;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    background:linear-gradient(
+        135deg,
+        #0f766e,
+        #115e59
+    );
+
+    color:white;
+
+    transition:.3s;
+
+}
+
+.rating-submit:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 25px rgba(15,118,110,.25);
+
+}
+
+.rating-submit:active{
+
+    transform:scale(.98);
+
+}
+
+/* ==========================================
+   THANK YOU CARD
+========================================== */
+
+.rating-success{
+
+    text-align:center;
+
+    padding:30px;
+
+    background:#ecfdf5;
+
+    border-radius:18px;
+
+    border:1px solid #bbf7d0;
+
+}
+
+.rating-success h2{
+
+    color:#15803d;
+
+    margin-bottom:10px;
+
+}
+
+.rating-success p{
+
+    color:#166534;
+
+}
+
+/* ==========================================
+   ANIMATION
+========================================== */
+
+@keyframes starPop{
+
+    0%{
+
+        transform:scale(.8);
+
+        opacity:0;
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}
+
+.rating-stars span.active{
+
+    animation:starPop .25s ease;
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media(max-width:768px){
+
+    .rating-container{
+
+        padding:22px;
+
+    }
+
+    .rating-driver{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+    .rating-stars{
+
+        gap:8px;
+
+    }
+
+    .rating-stars span{
+
+        font-size:38px;
+
+    }
+
+    .rating-value{
+
+        font-size:24px;
+
+    }
+
+}

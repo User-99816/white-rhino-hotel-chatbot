@@ -1,0 +1,329 @@
+/* ======================================================
+   WHITE RHINO HOTEL
+   VEHICLE CARD
+====================================================== */
+
+.airport-card{
+
+    background:#fff;
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.airport-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+        0 30px 60px rgba(0,0,0,.18);
+
+}
+
+/* ==========================================
+   IMAGE
+========================================== */
+
+.airport-image-wrapper{
+
+    position:relative;
+
+    overflow:hidden;
+
+    height:220px;
+
+}
+
+.airport-image{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.45s;
+
+}
+
+.airport-card:hover .airport-image{
+
+    transform:scale(1.08);
+
+}
+
+/* ==========================================
+   STATUS
+========================================== */
+
+.airport-status{
+
+    position:absolute;
+
+    top:16px;
+
+    right:16px;
+
+    padding:8px 16px;
+
+    border-radius:50px;
+
+    color:white;
+
+    font-size:13px;
+
+    font-weight:700;
+
+}
+
+.airport-status.available{
+
+    background:#16a34a;
+
+}
+
+.airport-status.unavailable{
+
+    background:#dc2626;
+
+}
+
+/* ==========================================
+   CONTENT
+========================================== */
+
+.airport-content{
+
+    padding:24px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.airport-card-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.airport-card-header h3{
+
+    margin:0;
+
+    font-size:24px;
+
+    color:#111827;
+
+}
+
+.airport-badge{
+
+    background:#f59e0b;
+
+    color:white;
+
+    padding:7px 14px;
+
+    border-radius:50px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+}
+
+/* ==========================================
+   FEATURES
+========================================== */
+
+.airport-features{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:14px;
+
+}
+
+.airport-feature{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    background:#f8fafc;
+
+    padding:12px;
+
+    border-radius:14px;
+
+    color:#374151;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.airport-feature:hover{
+
+    background:#ecfeff;
+
+}
+
+/* ==========================================
+   DIVIDER
+========================================== */
+
+.airport-divider{
+
+    height:1px;
+
+    background:#e5e7eb;
+
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.airport-footer{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+.airport-footer small{
+
+    display:block;
+
+    color:#6b7280;
+
+    margin-bottom:6px;
+
+}
+
+/* ==========================================
+   PRICE
+========================================== */
+
+.airport-price{
+
+    font-size:30px;
+
+    font-weight:700;
+
+    color:#0f766e;
+
+}
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+.airport-select-btn{
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:14px 22px;
+
+    border-radius:14px;
+
+    color:white;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    background:linear-gradient(
+        135deg,
+        #0f766e,
+        #115e59
+    );
+
+    transition:.3s;
+
+}
+
+.airport-select-btn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 12px 24px rgba(15,118,110,.35);
+
+}
+
+.airport-select-btn:disabled{
+
+    background:#9ca3af;
+
+    cursor:not-allowed;
+
+    box-shadow:none;
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:768px){
+
+    .airport-features{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .airport-footer{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    .airport-select-btn{
+
+        width:100%;
+
+    }
+
+}

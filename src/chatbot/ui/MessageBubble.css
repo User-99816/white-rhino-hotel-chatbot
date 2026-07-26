@@ -1,0 +1,378 @@
+/* =====================================================
+   WHITE RHINO HOTEL
+   PREMIUM MESSAGE BUBBLES
+===================================================== */
+
+/* ==========================================
+   ROW
+========================================== */
+
+.message-row{
+
+    display:flex;
+
+    align-items:flex-end;
+
+    gap:10px;
+
+    width:100%;
+
+    animation:messageIn .25s ease;
+
+}
+
+/* ==========================================
+   ALIGNMENT
+========================================== */
+
+.message-row.bot{
+
+    justify-content:flex-start;
+
+}
+
+.message-row.user{
+
+    justify-content:flex-end;
+
+}
+
+/* ==========================================
+   GROUP SPACING
+========================================== */
+
+.message-row.single{
+
+    margin:12px 0;
+
+}
+
+.message-row.first{
+
+    margin-top:12px;
+
+    margin-bottom:2px;
+
+}
+
+.message-row.middle{
+
+    margin:2px 0;
+
+}
+
+.message-row.last{
+
+    margin-top:2px;
+
+    margin-bottom:12px;
+
+}
+
+/* ==========================================
+   AVATAR
+========================================== */
+
+.avatar{
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    flex-shrink:0;
+
+    font-size:18px;
+
+    box-shadow:0 4px 10px rgba(0,0,0,.12);
+
+    transition:.25s;
+
+}
+
+.bot-avatar{
+
+    background:#2563eb;
+
+    color:white;
+
+}
+
+.user-avatar{
+
+    background:#16a34a;
+
+    color:white;
+
+}
+
+/* keeps layout aligned */
+
+.avatar-hidden{
+
+    visibility:hidden;
+
+}
+
+/* ==========================================
+   BUBBLE
+========================================== */
+
+.message-bubble{
+
+    max-width:78%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    padding:14px 16px;
+
+    border-radius:18px;
+
+    position:relative;
+
+    word-break:break-word;
+
+    box-shadow:
+
+        0 3px 10px rgba(0,0,0,.08);
+
+    transition:.2s;
+
+}
+
+/* ==========================================
+   BOT
+========================================== */
+
+.bot-bubble{
+
+    background:#fff;
+
+}
+
+/* ==========================================
+   USER
+========================================== */
+
+.user-bubble{
+
+    background:#dcf8c6;
+
+}
+
+/* ==========================================
+   GROUPED SHAPES
+========================================== */
+
+/* BOT */
+
+.bot-bubble.single{
+
+    border-radius:18px 18px 18px 6px;
+
+}
+
+.bot-bubble.first{
+
+    border-radius:18px 18px 18px 6px;
+
+}
+
+.bot-bubble.middle{
+
+    border-radius:6px 18px 18px 6px;
+
+}
+
+.bot-bubble.last{
+
+    border-radius:6px 18px 18px 6px;
+
+}
+
+/* USER */
+
+.user-bubble.single{
+
+    border-radius:18px 18px 6px 18px;
+
+}
+
+.user-bubble.first{
+
+    border-radius:18px 18px 6px 18px;
+
+}
+
+.user-bubble.middle{
+
+    border-radius:18px 6px 6px 18px;
+
+}
+
+.user-bubble.last{
+
+    border-radius:18px 6px 6px 18px;
+
+}
+
+/* ==========================================
+   TEXT
+========================================== */
+
+.bubble-text{
+
+    font-size:15px;
+
+    line-height:1.6;
+
+    color:#222;
+
+    white-space:pre-wrap;
+
+}
+
+/* ==========================================
+   TIME
+========================================== */
+
+.message-time{
+
+    align-self:flex-end;
+
+    margin-top:8px;
+
+    font-size:11px;
+
+    color:#777;
+
+}
+
+/* ==========================================
+   LINKS
+========================================== */
+
+.message-bubble a{
+
+    color:#2563eb;
+
+    text-decoration:none;
+
+}
+
+.message-bubble a:hover{
+
+    text-decoration:underline;
+
+}
+
+/* ==========================================
+   IMAGES
+========================================== */
+
+.message-bubble img{
+
+    width:100%;
+
+    border-radius:12px;
+
+    margin-top:10px;
+
+}
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.message-bubble button{
+
+    margin-top:10px;
+
+}
+
+/* ==========================================
+   HOVER
+========================================== */
+
+.message-bubble:hover{
+
+    transform:translateY(-1px);
+
+    box-shadow:
+
+        0 6px 16px rgba(0,0,0,.10);
+
+}
+
+/* ==========================================
+   ANIMATION
+========================================== */
+
+@keyframes messageIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(12px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media(max-width:768px){
+
+    .message-bubble{
+
+        max-width:88%;
+
+        padding:13px;
+
+    }
+
+    .avatar{
+
+        width:36px;
+
+        height:36px;
+
+        font-size:16px;
+
+    }
+
+}
+
+/* ==========================================
+   VERY SMALL DEVICES
+========================================== */
+
+@media(max-width:480px){
+
+    .message-bubble{
+
+        max-width:92%;
+
+    }
+
+}

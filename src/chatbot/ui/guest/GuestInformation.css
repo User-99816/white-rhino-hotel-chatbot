@@ -1,0 +1,388 @@
+/* ==========================================================
+   WHITE RHINO HOTEL
+   GUEST INFORMATION
+========================================================== */
+
+.guest-information{
+
+    background:#ffffff;
+
+    border-radius:24px;
+
+    padding:32px;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.08);
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.guest-header{
+
+    margin-bottom:10px;
+
+}
+
+.guest-header h2{
+
+    margin:0;
+
+    font-size:1.8rem;
+
+    color:#111827;
+
+    font-weight:700;
+
+}
+
+.guest-header p{
+
+    margin-top:8px;
+
+    color:#6B7280;
+
+    line-height:1.6;
+
+}
+
+/* ==========================================================
+   LABELS
+========================================================== */
+
+.guest-information label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-weight:600;
+
+    color:#374151;
+
+}
+
+.guest-information label svg{
+
+    color:#D4AF37;
+
+}
+
+/* ==========================================================
+   INPUTS
+========================================================== */
+
+.guest-information input[type="text"],
+.guest-information input[type="email"],
+.guest-information input[type="tel"],
+.guest-information input[type="time"],
+.guest-information select,
+.guest-information textarea{
+
+    width:100%;
+
+    padding:15px 18px;
+
+    border:2px solid #E5E7EB;
+
+    border-radius:14px;
+
+    outline:none;
+
+    font-size:15px;
+
+    background:#FAFAFA;
+
+    transition:.25s;
+
+    font-family:inherit;
+
+}
+
+.guest-information textarea{
+
+    resize:vertical;
+
+    min-height:120px;
+
+}
+
+.guest-information input:focus,
+.guest-information select:focus,
+.guest-information textarea:focus{
+
+    border-color:#D4AF37;
+
+    background:#ffffff;
+
+    box-shadow:0 0 0 4px rgba(212,175,55,.15);
+
+}
+
+/* ==========================================================
+   GENDER
+========================================================== */
+
+.gender-options{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:18px;
+
+    padding:10px 0;
+
+}
+
+.gender-options label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    font-weight:500;
+
+    cursor:pointer;
+
+}
+
+.gender-options input{
+
+    accent-color:#D4AF37;
+
+}
+
+/* ==========================================================
+   AIRPORT PICKUP
+========================================================== */
+
+.pickup-toggle{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:16px 18px;
+
+    background:#F8FAFC;
+
+    border-radius:14px;
+
+    border:1px solid #E5E7EB;
+
+}
+
+.pickup-toggle input{
+
+    width:20px;
+
+    height:20px;
+
+    accent-color:#16A34A;
+
+}
+
+/* ==========================================================
+   TERMS
+========================================================== */
+
+.terms{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:12px;
+
+    background:#F9FAFB;
+
+    padding:18px;
+
+    border-radius:14px;
+
+    border:1px solid #E5E7EB;
+
+    font-size:14px;
+
+    line-height:1.6;
+
+}
+
+.terms input{
+
+    margin-top:3px;
+
+    accent-color:#16A34A;
+
+}
+
+/* ==========================================================
+   BUTTONS
+========================================================== */
+
+.guest-actions{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:18px;
+
+    margin-top:20px;
+
+}
+
+.back-btn{
+
+    flex:1;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#E5E7EB;
+
+    color:#111827;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.back-btn:hover{
+
+    background:#D1D5DB;
+
+}
+
+.continue-btn{
+
+    flex:2;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:linear-gradient(
+        135deg,
+        #D4AF37,
+        #B9911C
+    );
+
+    color:#ffffff;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:0 15px 35px rgba(212,175,55,.30);
+
+}
+
+.continue-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 20px 45px rgba(212,175,55,.45);
+
+}
+
+.continue-btn svg{
+
+    color:#ffffff;
+
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media(max-width:768px){
+
+    .guest-information{
+
+        padding:24px;
+
+    }
+
+    .guest-header h2{
+
+        font-size:1.5rem;
+
+    }
+
+    .gender-options{
+
+        flex-direction:column;
+
+        gap:12px;
+
+    }
+
+    .guest-actions{
+
+        flex-direction:column;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .guest-information{
+
+        padding:18px;
+
+    }
+
+    .guest-information input,
+    .guest-information select,
+    .guest-information textarea{
+
+        font-size:14px;
+
+    }
+
+    .continue-btn,
+    .back-btn{
+
+        width:100%;
+
+    }
+
+}

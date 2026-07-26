@@ -1,0 +1,368 @@
+/* ======================================================
+   WHITE RHINO HOTEL
+   TRANSFER COMPLETE
+====================================================== */
+
+.transfer-complete{
+
+    max-width:850px;
+
+    margin:auto;
+
+    animation:fadeIn .5s ease;
+
+}
+
+.complete-card{
+
+    background:#fff;
+
+    border-radius:24px;
+
+    padding:40px;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.10);
+
+    text-align:center;
+
+}
+
+/* ==========================================
+   SUCCESS ICON
+========================================== */
+
+.complete-icon{
+
+    width:120px;
+
+    height:120px;
+
+    margin:auto;
+
+    margin-bottom:25px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:60px;
+
+    background:linear-gradient(135deg,#22c55e,#16a34a);
+
+    color:white;
+
+    box-shadow:0 15px 30px rgba(34,197,94,.35);
+
+}
+
+.complete-card h1{
+
+    color:#111827;
+
+    margin-bottom:12px;
+
+    font-size:34px;
+
+}
+
+.complete-card p{
+
+    color:#6b7280;
+
+    line-height:1.6;
+
+    margin-bottom:30px;
+
+}
+
+/* ==========================================
+   SUMMARY
+========================================== */
+
+.complete-summary{
+
+    background:#f8fafc;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    margin-bottom:30px;
+
+}
+
+.summary-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:14px 0;
+
+    border-bottom:1px solid #e5e7eb;
+
+}
+
+.summary-row:last-child{
+
+    border-bottom:none;
+
+}
+
+.summary-row span{
+
+    color:#6b7280;
+
+    font-weight:500;
+
+}
+
+.summary-row strong{
+
+    color:#111827;
+
+}
+
+.status-complete{
+
+    color:#16a34a;
+
+    font-weight:700;
+
+}
+
+/* ==========================================
+   RATING
+========================================== */
+
+.rating-section{
+
+    margin:35px 0;
+
+}
+
+.rating-section h3{
+
+    color:#111827;
+
+    margin-bottom:15px;
+
+}
+
+.rating-section small{
+
+    color:#6b7280;
+
+}
+
+.stars{
+
+    font-size:38px;
+
+    letter-spacing:8px;
+
+    margin:20px 0;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.stars:hover{
+
+    transform:scale(1.05);
+
+}
+
+/* ==========================================
+   ACTION BUTTONS
+========================================== */
+
+.complete-actions{
+
+    display:flex;
+
+    gap:18px;
+
+    margin-top:35px;
+
+}
+
+.primary-btn,
+
+.secondary-btn{
+
+    flex:1;
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:16px;
+
+    border-radius:14px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.primary-btn{
+
+    background:linear-gradient(135deg,#0f766e,#115e59);
+
+    color:white;
+
+}
+
+.primary-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 20px rgba(15,118,110,.25);
+
+}
+
+.secondary-btn{
+
+    background:#f3f4f6;
+
+    color:#374151;
+
+}
+
+.secondary-btn:hover{
+
+    background:#e5e7eb;
+
+    transform:translateY(-3px);
+
+}
+
+/* ==========================================
+   RECEIPT PANEL
+========================================== */
+
+.receipt-card{
+
+    margin-top:35px;
+
+    padding:20px;
+
+    background:#fffbeb;
+
+    border:1px dashed #f59e0b;
+
+    border-radius:16px;
+
+    text-align:left;
+
+}
+
+.receipt-card h4{
+
+    margin-bottom:15px;
+
+    color:#92400e;
+
+}
+
+.receipt-card p{
+
+    margin:6px 0;
+
+    color:#78350f;
+
+}
+
+/* ==========================================
+   THANK YOU
+========================================== */
+
+.thank-you{
+
+    margin-top:35px;
+
+    padding:18px;
+
+    border-radius:16px;
+
+    background:#ecfeff;
+
+    color:#0f766e;
+
+    font-weight:600;
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:768px){
+
+    .complete-card{
+
+        padding:25px;
+
+    }
+
+    .complete-actions{
+
+        flex-direction:column;
+
+    }
+
+    .summary-row{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:5px;
+
+    }
+
+    .stars{
+
+        font-size:30px;
+
+        letter-spacing:4px;
+
+    }
+
+}
+
+/* ==========================================
+   ANIMATION
+========================================== */
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}

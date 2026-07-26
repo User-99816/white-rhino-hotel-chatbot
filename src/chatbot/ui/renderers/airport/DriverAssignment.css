@@ -1,0 +1,703 @@
+/* ======================================================
+   WHITE RHINO HOTEL
+   DRIVER ASSIGNMENT
+   PREMIUM MOBILE UI
+   ====================================================== */
+
+*{
+    box-sizing:border-box;
+}
+
+.driver-page{
+
+    width:100%;
+    max-width:360px;
+    margin:0 auto;
+
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+
+    padding:14px;
+
+    font-family:Inter,sans-serif;
+
+}
+
+/* ======================================================
+   LOADING
+====================================================== */
+
+.driver-loading{
+
+    max-width:360px;
+    margin:40px auto;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    gap:14px;
+
+    padding:30px;
+
+}
+
+.loading-spinner{
+
+    width:54px;
+    height:54px;
+
+    border:5px solid #dbeafe;
+    border-top:5px solid #2563eb;
+
+    border-radius:50%;
+
+    animation:spin .8s linear infinite;
+
+}
+
+@keyframes spin{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+/* ======================================================
+   HERO
+====================================================== */
+
+.driver-hero{
+
+    background:linear-gradient(135deg,#2563eb,#1e3a8a);
+
+    border-radius:22px;
+
+    color:#fff;
+
+    text-align:center;
+
+    padding:26px 18px;
+
+    box-shadow:0 14px 35px rgba(37,99,235,.30);
+
+}
+
+.driver-success{
+
+    width:72px;
+    height:72px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:rgba(255,255,255,.18);
+
+    font-size:36px;
+
+    margin-bottom:14px;
+
+}
+
+.driver-badge{
+
+    display:inline-block;
+
+    background:#22c55e;
+
+    color:#fff;
+
+    padding:6px 14px;
+
+    border-radius:999px;
+
+    font-size:11px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    margin-bottom:12px;
+
+}
+
+.driver-hero h1{
+
+    margin:0;
+
+    font-size:23px;
+
+    font-weight:800;
+
+}
+
+.driver-hero p{
+
+    margin-top:12px;
+
+    font-size:13px;
+
+    line-height:1.6;
+
+    opacity:.92;
+
+}
+
+/* ======================================================
+   CARDS
+====================================================== */
+
+.driver-card,
+.eta-card,
+.transfer-summary-card,
+.trip-progress-card,
+.guarantee-card{
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:18px;
+
+    box-shadow:0 8px 24px rgba(0,0,0,.08);
+
+}
+
+/* ======================================================
+   DRIVER CARD
+====================================================== */
+
+.driver-card{
+
+    display:flex;
+
+    gap:16px;
+
+    align-items:center;
+
+}
+
+.driver-avatar{
+
+    width:76px;
+    height:76px;
+
+    border-radius:50%;
+
+    background:#2563eb;
+
+    color:#fff;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:38px;
+
+    flex-shrink:0;
+
+}
+
+.driver-info{
+
+    flex:1;
+
+}
+
+.driver-info h2{
+
+    margin:0;
+
+    font-size:20px;
+
+    color:#1f2937;
+
+}
+
+.rating{
+
+    margin:6px 0 10px;
+
+    color:#f59e0b;
+
+    font-weight:700;
+
+}
+
+.driver-meta{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:6px;
+
+}
+
+.driver-meta span{
+
+    font-size:13px;
+
+    color:#4b5563;
+
+}
+
+/* ======================================================
+   ETA
+====================================================== */
+
+.eta-card{
+
+    display:flex;
+
+    gap:16px;
+
+    align-items:center;
+
+}
+
+.eta-icon{
+
+    width:58px;
+    height:58px;
+
+    border-radius:50%;
+
+    background:#eff6ff;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:28px;
+
+    color:#2563eb;
+
+    flex-shrink:0;
+
+}
+
+.eta-card small{
+
+    color:#6b7280;
+
+    font-size:12px;
+
+}
+
+.eta-card h2{
+
+    margin:4px 0;
+
+    color:#2563eb;
+
+    font-size:24px;
+
+}
+
+.eta-card p{
+
+    margin:0;
+
+    color:#6b7280;
+
+    font-size:13px;
+
+}
+
+/* ======================================================
+   SUMMARY
+====================================================== */
+
+.transfer-summary-card h2,
+.trip-progress-card h2{
+
+    margin-top:0;
+
+    margin-bottom:16px;
+
+    font-size:18px;
+
+    color:#1f2937;
+
+}
+
+.summary-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:12px 0;
+
+    border-bottom:1px solid #f1f5f9;
+
+}
+
+.summary-row:last-child{
+
+    border-bottom:none;
+
+}
+
+.summary-row span{
+
+    color:#6b7280;
+
+    font-size:13px;
+
+}
+
+.summary-row strong{
+
+    color:#111827;
+
+    font-size:14px;
+
+    text-align:right;
+
+}
+
+.status-assigned{
+
+    color:#16a34a !important;
+
+}
+
+/* ======================================================
+   TIMELINE
+====================================================== */
+
+.timeline{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.timeline-item{
+
+    display:flex;
+
+    gap:14px;
+
+}
+
+.timeline-dot{
+
+    width:42px;
+    height:42px;
+
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:#e5e7eb;
+
+    font-size:18px;
+
+    flex-shrink:0;
+
+}
+
+.timeline-item.completed .timeline-dot{
+
+    background:#16a34a;
+
+    color:#fff;
+
+}
+
+.timeline-item.active .timeline-dot{
+
+    background:#2563eb;
+
+    color:#fff;
+
+}
+
+.timeline-item h4{
+
+    margin:0;
+
+    font-size:15px;
+
+    color:#1f2937;
+
+}
+
+.timeline-item p{
+
+    margin:5px 0 0;
+
+    font-size:13px;
+
+    color:#6b7280;
+
+    line-height:1.5;
+
+}
+
+/* ======================================================
+   GUARANTEE
+====================================================== */
+
+.guarantee-card{
+
+    display:flex;
+
+    gap:14px;
+
+    align-items:flex-start;
+
+    background:#ecfdf5;
+
+    border:1px solid #bbf7d0;
+
+}
+
+.guarantee-icon{
+
+    width:52px;
+    height:52px;
+
+    border-radius:50%;
+
+    background:#16a34a;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    color:#fff;
+
+    font-size:24px;
+
+    flex-shrink:0;
+
+}
+
+.guarantee-card h3{
+
+    margin:0 0 8px;
+
+    color:#166534;
+
+    font-size:17px;
+
+}
+
+.guarantee-card p{
+
+    margin:0;
+
+    font-size:13px;
+
+    color:#374151;
+
+    line-height:1.6;
+
+}
+
+/* ======================================================
+   BUTTONS
+====================================================== */
+
+.driver-actions{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+.primary-btn,
+.secondary-btn,
+.back-btn{
+
+    width:100%;
+
+    border:none;
+
+    border-radius:14px;
+
+    padding:14px;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.primary-btn{
+
+    background:#2563eb;
+
+    color:#fff;
+
+    box-shadow:0 10px 24px rgba(37,99,235,.28);
+
+}
+
+.primary-btn:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-2px);
+
+}
+
+.secondary-btn{
+
+    background:#fff;
+
+    border:2px solid #2563eb;
+
+    color:#2563eb;
+
+}
+
+.secondary-btn:hover{
+
+    background:#2563eb;
+
+    color:#fff;
+
+}
+
+.back-btn{
+
+    background:#f3f4f6;
+
+    color:#374151;
+
+}
+
+.back-btn:hover{
+
+    background:#e5e7eb;
+
+}
+
+/* ======================================================
+   MOBILE
+====================================================== */
+
+@media (max-width:420px){
+
+    .driver-page{
+
+        padding:12px;
+
+        gap:14px;
+
+    }
+
+    .driver-card{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+    .driver-meta{
+
+        align-items:center;
+
+    }
+
+}
+
+/* ======================================================
+   TABLET
+====================================================== */
+
+@media (min-width:768px){
+
+    .driver-page{
+
+        max-width:520px;
+
+    }
+
+}
+
+/* ======================================================
+   DESKTOP
+====================================================== */
+
+@media (min-width:1200px){
+
+    .driver-page{
+
+        max-width:620px;
+
+    }
+
+}
+
+/* ======================================================
+   ANIMATION
+====================================================== */
+
+.driver-card,
+.eta-card,
+.transfer-summary-card,
+.trip-progress-card,
+.guarantee-card{
+
+    animation:fadeUp .35s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(12px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}

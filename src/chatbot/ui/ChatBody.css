@@ -1,0 +1,152 @@
+/* =====================================================
+   WHITE RHINO HOTEL
+   CHAT BODY
+===================================================== */
+
+.chat-body{
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+    overflow-y:auto;
+
+    overflow-x:hidden;
+
+    padding:18px;
+
+    gap:14px;
+
+    scroll-behavior:smooth;
+
+    background:#efeae2;
+
+    min-height: 0;
+
+}
+
+/* ==========================================
+   WHATSAPP WALLPAPER
+========================================== */
+
+.chat-body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background-image:
+
+        radial-gradient(
+
+            rgba(0,0,0,.035) 1px,
+
+            transparent 1px
+
+        );
+
+    background-size:26px 26px;
+
+    pointer-events:none;
+
+    z-index:0;
+
+}
+
+/* ==========================================
+   KEEP CONTENT ABOVE WALLPAPER
+========================================== */
+
+.chat-body > *{
+
+    position:relative;
+
+    z-index:1;
+
+}
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+.chat-body::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+.chat-body::-webkit-scrollbar-track{
+
+    background:transparent;
+
+}
+
+.chat-body::-webkit-scrollbar-thumb{
+
+    background:#c7c7c7;
+
+    border-radius:10px;
+
+}
+
+.chat-body::-webkit-scrollbar-thumb:hover{
+
+    background:#a8a8a8;
+
+}
+
+/* Firefox */
+
+.chat-body{
+
+    scrollbar-width:thin;
+
+    scrollbar-color:#c7c7c7 transparent;
+
+}
+
+/* ==========================================
+   TYPING INDICATOR SPACING
+========================================== */
+
+.typing-indicator{
+
+    margin-top:6px;
+
+    margin-bottom:4px;
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width:768px){
+
+    .chat-body{
+
+        padding:14px;
+
+        gap:12px;
+
+    }
+
+}
+
+/* ==========================================
+   LARGE SCREENS
+========================================== */
+
+@media (min-width:1200px){
+
+    .chat-body{
+
+        padding:24px;
+
+    }
+
+}

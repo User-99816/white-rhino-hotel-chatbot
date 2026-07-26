@@ -1,0 +1,406 @@
+/* ==========================================================
+   WHITE RHINO HOTEL
+   PREMIUM BOOKING PANEL
+========================================================== */
+
+.booking-panel{
+
+    background:#ffffff;
+
+    border-radius:24px;
+
+    padding:30px;
+
+    box-shadow:
+        0 15px 45px rgba(0,0,0,.08);
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+/* ==========================================================
+   TITLE
+========================================================== */
+
+.booking-panel h2{
+
+    margin:0;
+
+    color:#111827;
+
+    font-size:1.6rem;
+
+    font-weight:700;
+
+}
+
+/* ==========================================================
+   LABELS
+========================================================== */
+
+.booking-panel label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-weight:600;
+
+    color:#374151;
+
+    margin-top:8px;
+
+}
+
+.booking-panel label svg{
+
+    color:#D4AF37;
+
+}
+
+/* ==========================================================
+   INPUTS
+========================================================== */
+
+.booking-panel input{
+
+    width:100%;
+
+    padding:14px 16px;
+
+    border:2px solid #E5E7EB;
+
+    border-radius:14px;
+
+    font-size:15px;
+
+    outline:none;
+
+    transition:.25s;
+
+    background:#FAFAFA;
+
+}
+
+.booking-panel input:focus{
+
+    border-color:#D4AF37;
+
+    background:#ffffff;
+
+    box-shadow:
+        0 0 0 4px rgba(212,175,55,.15);
+
+}
+
+/* ==========================================================
+   GUEST SELECTOR
+========================================================== */
+
+.guest-selector{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:#F8FAFC;
+
+    border-radius:16px;
+
+    padding:12px 18px;
+
+}
+
+.guest-selector button{
+
+    width:42px;
+
+    height:42px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#D4AF37;
+
+    color:#fff;
+
+    cursor:pointer;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    transition:.25s;
+
+}
+
+.guest-selector button:hover{
+
+    transform:scale(1.08);
+
+    background:#b9911c;
+
+}
+
+.guest-selector span{
+
+    font-size:20px;
+
+    font-weight:700;
+
+    color:#111827;
+
+}
+
+/* ==========================================================
+   AVAILABILITY
+========================================================== */
+
+.availability-card{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:16px;
+
+    border-radius:16px;
+
+    background:#ECFDF5;
+
+    color:#15803D;
+
+    font-weight:700;
+
+    border-left:6px solid #16A34A;
+
+}
+
+.availability-card svg{
+
+    width:22px;
+
+    height:22px;
+
+}
+
+/* ==========================================================
+   SUMMARY
+========================================================== */
+
+.booking-summary{
+
+    background:#F9FAFB;
+
+    border-radius:18px;
+
+    padding:20px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+}
+
+.booking-summary div{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    font-size:15px;
+
+}
+
+.booking-summary span{
+
+    color:#6B7280;
+
+}
+
+.booking-summary strong{
+
+    color:#111827;
+
+}
+
+/* ==========================================================
+   TOTAL
+========================================================== */
+
+.booking-total{
+
+    margin-top:10px;
+
+    padding-top:18px;
+
+    border-top:2px dashed #D1D5DB;
+
+    font-size:18px !important;
+
+    font-weight:700;
+
+}
+
+.booking-total svg{
+
+    color:#D4AF37;
+
+}
+
+/* ==========================================================
+   BUTTONS
+========================================================== */
+
+.availability-btn{
+
+    border:none;
+
+    border-radius:16px;
+
+    padding:16px;
+
+    background:#111827;
+
+    color:#ffffff;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.availability-btn:hover{
+
+    background:#1F2937;
+
+    transform:translateY(-2px);
+
+}
+
+.book-room-btn{
+
+    border:none;
+
+    border-radius:16px;
+
+    padding:18px;
+
+    background:linear-gradient(
+        135deg,
+        #D4AF37,
+        #B9911C
+    );
+
+    color:#ffffff;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:
+        0 12px 30px rgba(212,175,55,.30);
+
+}
+
+.book-room-btn:hover:not(:disabled){
+
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 18px 35px rgba(212,175,55,.45);
+
+}
+
+.book-room-btn:disabled{
+
+    background:#9CA3AF;
+
+    box-shadow:none;
+
+    cursor:not-allowed;
+
+}
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media(max-width:768px){
+
+    .booking-panel{
+
+        padding:22px;
+
+    }
+
+    .booking-panel h2{
+
+        font-size:1.35rem;
+
+    }
+
+    .guest-selector{
+
+        padding:10px 15px;
+
+    }
+
+    .booking-summary{
+
+        padding:16px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .booking-panel{
+
+        padding:18px;
+
+    }
+
+    .booking-panel input{
+
+        font-size:14px;
+
+    }
+
+    .availability-btn,
+
+    .book-room-btn{
+
+        padding:15px;
+
+        font-size:15px;
+
+    }
+
+}

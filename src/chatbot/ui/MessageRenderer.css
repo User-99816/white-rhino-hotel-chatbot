@@ -1,0 +1,64 @@
+/* =====================================================
+   WHITE RHINO HOTEL
+   MESSAGE RENDERER
+===================================================== */
+
+.message-renderer{
+
+    width:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    margin-top:10px;
+
+    animation:rendererFade .25s ease;
+
+}
+
+/* renderer cards */
+
+.message-renderer>*{
+
+    width:100%;
+
+}
+
+/* spacing */
+
+.message-renderer .booking-card,
+
+.message-renderer .restaurant-card,
+
+.message-renderer .airport-card,
+
+.message-renderer .conference-card,
+
+.message-renderer .contact-card{
+
+    margin-top:4px;
+
+}
+
+/* animation */
+
+@keyframes rendererFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(6px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}

@@ -1,0 +1,890 @@
+/* =====================================================
+   WHITE RHINO HOTEL
+   TRANSFER FORM
+   PART 1
+===================================================== */
+
+.transfer-page{
+    width:100%;
+    max-width:360px;
+    margin:0 auto;
+    padding:14px;
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+    background:#f5f7fb;
+    box-sizing:border-box;
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.transfer-header{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.transfer-header h1{
+    margin:0;
+    font-size:20px;
+    font-weight:700;
+    color:#1f2937;
+}
+
+.transfer-header p{
+    margin:4px 0 0;
+    font-size:13px;
+    color:#6b7280;
+    line-height:1.5;
+}
+
+/* =====================================================
+   BACK BUTTON
+===================================================== */
+
+.back-btn{
+    align-self:flex-start;
+    border:none;
+    background:#ffffff;
+    color:#2563eb;
+    padding:8px 14px;
+    border-radius:10px;
+    font-size:13px;
+    font-weight:600;
+    cursor:pointer;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+    transition:.25s;
+}
+
+.back-btn:hover{
+    background:#2563eb;
+    color:white;
+}
+
+/* =====================================================
+   PROGRESS BAR
+===================================================== */
+
+.progress-bar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:6px;
+}
+
+.progress-step{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:6px;
+    flex:1;
+}
+
+.progress-circle{
+    width:32px;
+    height:32px;
+    border-radius:50%;
+    background:#d1d5db;
+    color:#6b7280;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:14px;
+    font-weight:700;
+}
+
+.progress-step.active .progress-circle{
+    background:#16a34a;
+    color:white;
+}
+
+.progress-step span{
+    font-size:11px;
+    color:#6b7280;
+    text-align:center;
+}
+
+.progress-line{
+    flex:1;
+    height:3px;
+    background:#d1d5db;
+    border-radius:10px;
+    margin-top:-18px;
+}
+
+.progress-line.active{
+    background:#16a34a;
+}
+
+/* =====================================================
+   VEHICLE CARD
+===================================================== */
+
+.vehicle-card{
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 8px 24px rgba(0,0,0,.08);
+}
+
+.vehicle-card img{
+    width:100%;
+    height:170px;
+    object-fit:cover;
+    display:block;
+}
+
+.vehicle-info{
+    padding:16px;
+}
+
+.vehicle-tag{
+    display:inline-block;
+    background:#dcfce7;
+    color:#166534;
+    padding:4px 10px;
+    border-radius:30px;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:.4px;
+    margin-bottom:10px;
+}
+
+.vehicle-info h2{
+    margin:0;
+    font-size:20px;
+    color:#111827;
+}
+
+.vehicle-meta{
+    display:flex;
+    justify-content:space-between;
+    margin:14px 0;
+    font-size:13px;
+    color:#6b7280;
+}
+
+.vehicle-info h3{
+    margin:0;
+    color:#2563eb;
+    font-size:24px;
+    font-weight:800;
+}
+
+/* =====================================================
+   EMPTY STATE
+===================================================== */
+
+.transfer-empty{
+    max-width:360px;
+    margin:40px auto;
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.transfer-empty h2{
+    margin-bottom:20px;
+    color:#374151;
+}
+
+/* =====================================================
+   FORM CARDS
+===================================================== */
+
+.form-card{
+    background:#ffffff;
+    border-radius:18px;
+    padding:18px;
+    box-shadow:0 8px 24px rgba(0,0,0,.08);
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+}
+
+.form-card h2{
+    margin:0;
+    font-size:20px;
+    color:#111827;
+    font-weight:700;
+}
+
+.form-card p{
+    margin:0;
+    color:#6b7280;
+    font-size:13px;
+    line-height:1.5;
+}
+
+/* =====================================================
+   FORM GROUP
+===================================================== */
+
+.form-group{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+
+.form-group label{
+    font-size:13px;
+    font-weight:600;
+    color:#374151;
+}
+
+/* =====================================================
+   INPUTS
+===================================================== */
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+
+    width:100%;
+    padding:12px 14px;
+
+    border:1px solid #d1d5db;
+    border-radius:12px;
+
+    background:#ffffff;
+
+    font-size:14px;
+    color:#111827;
+
+    outline:none;
+    transition:.25s;
+
+    box-sizing:border-box;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder{
+    color:#9ca3af;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+
+    border-color:#2563eb;
+
+    box-shadow:0 0 0 4px rgba(37,99,235,.12);
+
+}
+
+/* =====================================================
+   SELECT
+===================================================== */
+
+.form-group select{
+
+    appearance:none;
+    cursor:pointer;
+
+}
+
+/* =====================================================
+   TEXTAREA
+===================================================== */
+
+.form-group textarea{
+
+    resize:none;
+    min-height:110px;
+    font-family:inherit;
+
+}
+
+/* =====================================================
+   TWO COLUMN
+===================================================== */
+
+.two-column{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:12px;
+
+}
+
+/* =====================================================
+   TRAVEL DETAILS
+===================================================== */
+
+.counter-card{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:14px;
+
+    background:#f8fafc;
+
+    border:1px solid #e5e7eb;
+
+    border-radius:14px;
+
+}
+
+.counter-card h4{
+
+    margin:0;
+
+    font-size:15px;
+
+    color:#111827;
+
+}
+
+.counter-card small{
+
+    color:#6b7280;
+
+    font-size:12px;
+
+}
+
+/* =====================================================
+   COUNTER
+===================================================== */
+
+.counter{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+.counter button{
+
+    width:34px;
+
+    height:34px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#2563eb;
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.counter button:hover{
+
+    transform:scale(1.08);
+
+    background:#1d4ed8;
+
+}
+
+.counter span{
+
+    width:24px;
+
+    text-align:center;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    color:#111827;
+
+}
+
+/* =====================================================
+   SWITCH CARD
+===================================================== */
+
+.switch-card{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:14px;
+
+    border-radius:14px;
+
+    background:#f8fafc;
+
+    border:1px solid #e5e7eb;
+
+}
+
+.switch-card h4{
+
+    margin:0;
+
+    color:#111827;
+
+}
+
+.switch-card small{
+
+    color:#6b7280;
+
+    font-size:12px;
+
+}
+
+/* =====================================================
+   IOS SWITCH
+===================================================== */
+
+.switch{
+
+    position:relative;
+
+    width:52px;
+
+    height:28px;
+
+}
+
+.switch input{
+
+    display:none;
+
+}
+
+.slider{
+
+    position:absolute;
+
+    inset:0;
+
+    background:#d1d5db;
+
+    border-radius:999px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.slider::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:22px;
+
+    height:22px;
+
+    left:3px;
+
+    top:3px;
+
+    background:white;
+
+    border-radius:50%;
+
+    transition:.3s;
+
+    box-shadow:0 2px 6px rgba(0,0,0,.2);
+
+}
+
+.switch input:checked + .slider{
+
+    background:#16a34a;
+
+}
+
+.switch input:checked + .slider::before{
+
+    transform:translateX(24px);
+
+}
+
+/* =====================================================
+   FARE SUMMARY
+===================================================== */
+
+.fare-card{
+
+    background:linear-gradient(
+        135deg,
+        #1e3a8a,
+        #2563eb
+    );
+
+    color:rgb(206, 189, 35);
+
+    border-radius:18px;
+
+    padding:18px;
+
+    box-shadow:0 12px 30px rgba(37,99,235,.30);
+
+}
+
+.fare-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    gap:12px;
+
+}
+
+.fare-header small{
+
+    display:block;
+
+    opacity:.8;
+
+    margin-bottom:6px;
+
+    font-size:12px;
+
+}
+
+.fare-header h2{
+
+    margin:0;
+
+    font-size:20px;
+
+    color:rgb(35, 20, 78);
+
+}
+
+.fare-price{
+
+    font-size:24px;
+
+    font-weight:800;
+
+    white-space:nowrap;
+
+}
+
+.fare-divider{
+
+    height:1px;
+
+    background:rgba(255,255,255,.25);
+
+    margin:16px 0;
+
+}
+
+.fare-services{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
+.service-item{
+
+    font-size:13px;
+
+    line-height:1.5;
+
+    background-color: #f8cc06;
+
+}
+
+/* =====================================================
+   HOTEL GUARANTEE
+===================================================== */
+
+.notice-card{
+
+    display:flex;
+
+    gap:14px;
+
+    align-items:flex-start;
+
+    background:#ecfdf5;
+
+    border:1px solid #bbf7d0;
+
+    border-radius:18px;
+
+    padding:16px;
+
+}
+
+.notice-icon{
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:50%;
+
+    background:#16a34a;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:22px;
+
+    flex-shrink:0;
+
+}
+
+.notice-card h3{
+
+    margin:0 0 6px;
+
+    color:#166534;
+
+    font-size:16px;
+
+}
+
+.notice-card p{
+
+    margin:0;
+
+    color:#374151;
+
+    font-size:13px;
+
+    line-height:1.6;
+
+}
+
+/* =====================================================
+   ACTION BUTTONS
+===================================================== */
+
+.form-actions{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+.primary-btn,
+.secondary-btn{
+
+    width:100%;
+
+    border:none;
+
+    border-radius:14px;
+
+    padding:14px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    transition:.25s;
+
+}
+
+.primary-btn{
+
+    background:#2563eb;
+
+    color:white;
+
+    box-shadow:0 8px 20px rgba(37,99,235,.25);
+
+}
+
+.primary-btn:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-2px);
+
+}
+
+.secondary-btn{
+
+    background:white;
+
+    color:#2563eb;
+
+    border:2px solid #2563eb;
+
+}
+
+.secondary-btn:hover{
+
+    background:#2563eb;
+
+    color:white;
+
+}
+
+/* =====================================================
+   MOBILE RESPONSIVE
+===================================================== */
+
+@media (max-width:420px){
+
+    .transfer-page{
+
+        padding:12px;
+
+        gap:14px;
+
+    }
+
+    .vehicle-card img{
+
+        height:150px;
+
+    }
+
+    .vehicle-info h2{
+
+        font-size:18px;
+
+    }
+
+    .vehicle-info h3{
+
+        font-size:22px;
+
+    }
+
+    .fare-price{
+
+        font-size:20px;
+
+    }
+
+    .two-column{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+/* =====================================================
+   TABLETS
+===================================================== */
+
+@media (min-width:768px){
+
+    .transfer-page{
+
+        max-width:520px;
+
+    }
+
+}
+
+/* =====================================================
+   DESKTOP
+===================================================== */
+
+@media (min-width:1200px){
+
+    .transfer-page{
+
+        max-width:620px;
+
+    }
+
+}
+
+/* =====================================================
+   SMOOTH ANIMATIONS
+===================================================== */
+
+.vehicle-card,
+.form-card,
+.fare-card,
+.notice-card{
+
+    animation:fadeUp .35s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(12px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* =====================================================
+   SCROLLBAR
+===================================================== */
+
+.transfer-page::-webkit-scrollbar{
+
+    width:6px;
+
+}
+
+.transfer-page::-webkit-scrollbar-thumb{
+
+    background:#cbd5e1;
+
+    border-radius:999px;
+
+}
+
+.transfer-page::-webkit-scrollbar-thumb:hover{
+
+    background:#94a3b8;
+
+}
